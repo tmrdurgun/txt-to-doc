@@ -12,9 +12,15 @@ try {
     return line;
   });
 
+  const dir = './dist';
+
+  if (!fs.existsSync(dir)) {
+    fs.mkdirSync(dir);
+  }
+
   for (let index = 0; index < contentArr.length; index++) {
     const docName = contentArr[index];
-    const doc = fs.createWriteStream(`./${docName}.docx`);
+    const doc = fs.createWriteStream(`./dist/${docName}.docx`);
     doc.write(docName);
   }
 
