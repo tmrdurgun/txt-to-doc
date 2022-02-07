@@ -1,0 +1,11 @@
+{
+  "name": "txttodoc",
+  "version": "1.0.0",
+  "description": "converts txt lines as doc with filename",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tamer D.",
+  "license": "ISC"
+}
