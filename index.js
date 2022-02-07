@@ -7,7 +7,7 @@ try {
   const content = fs.readFileSync(sourceFileUrl, { encoding: 'utf8', flag: 'r' });
 
   const contentArr = content.split(',').map((line, i) => {
-    line = line.trim();
+    line = line.replace(/(\r\n|\n|\r)/gm, "");
 
     return line;
   });
