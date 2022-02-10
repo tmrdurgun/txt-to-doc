@@ -20,10 +20,8 @@ try {
 
   for (let index = 0; index < contentArr.length; index++) {
     const docName = contentArr[index];
-    const doc = fs.createWriteStream(`./dist/${docName}.doc`);
-    doc.write(docName);
+    fs.createWriteStream(`./dist/${docName}.docx`);
   }
-
 
 } catch (error) {
   console.log(error);
