@@ -20,7 +20,7 @@ try {
 
   for (let index = 0; index < contentArr.length; index++) {
     const docName = contentArr[index];
-    fs.createWriteStream(`./dist/${docName}.docx`);
+    if (docName.length > 0) fs.createWriteStream(`./dist/${docName}.docx`);
   }
 
 } catch (error) {
